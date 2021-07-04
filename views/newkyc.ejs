@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kyc</title>
+  </head>
+  <body>
+   
+
+    <h1>Uplaoded Images</h1>
+        <div>
+            <% items.forEach(function(item) { %>
+            <div>
+                <div>
+
+                    <img style="width:150px; height:200px;margin:50px" src="data:image/<%=item.img.contentType%>;base64,
+                         <%=item.img.data.toString('base64')%>">
+              
+                </div>
+            </div>
+            <% }) %>
+        </div>
+  </body>
+</html>

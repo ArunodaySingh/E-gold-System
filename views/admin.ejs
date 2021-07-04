@@ -1,0 +1,29 @@
+<%-include('partials/header')-%>
+
+<h2 style="margin-top:5px;border:2px solid grey; border-radius:10px;box-shadow:5px 5px 14px -4px;font-weight:bold; " class="text-center"> Admin Panel</h2>
+
+  <div class="row">
+    <% data.forEach(function(element)
+    {%>
+  <div class="col-lg-4 col-md-6" style="margin:5px">
+    <div class="card text-center card-shadow on-hover border-0 mb-4">
+      <div class="card-body font-14">
+
+        <h5 class="subtitle font-weight-normal" style="color:green;font-weight:bold;">Member Name: <%=element.name%></h5>
+
+        <ul class="list-inline">
+          <li class="d-block py-2">Member Email: <%=element.username %></li>
+          <li class="d-block py-2">Member Contact No: <%=element.contact %></li>
+          <h6 class="d-block py-2"> Subscription: <%= element.Subscription %></h6>
+
+        </ul>
+</div>
+</div>
+</div>
+<%}) %>
+</div>
+
+
+
+
+<%-include('partials/footer')-%>

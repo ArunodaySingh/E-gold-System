@@ -1,0 +1,51 @@
+<%- include('partials/header') %>
+<style>
+  html,
+  body {
+      height: 100%;
+  }
+
+  body {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #d9ebeb;
+  }
+  </style>
+<body>
+
+<div class="container">
+
+<div class="jumbotron centered">
+    <i class="fas fa-credit-card fa-6x"></i>
+  <h1 style="color:green;opacity:0.5;">Make a Payment  </h1>
+
+    <form action="/pay" method="POST">
+    
+
+      <div class="form-group">
+        <input type="text" class="form-control text-center" name="name" placeholder="Enter Your Name">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control text-center" name="email" placeholder="Enter Your Email">
+        </div>
+          <div class="form-group">
+              <input type="number" class="form-control text-center" name="number" placeholder="Enter Your Number">
+          </div>
+          <input type="text" disabled="disabled" class="form-control text-center" name="amount" value= <%=amount%>>
+        </div>
+            
+
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+
+
+  </div>
+
+  </div>
+</div>
+</body>
+<%- include('partials/footer') %>
